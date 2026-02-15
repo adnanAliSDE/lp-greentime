@@ -1,6 +1,9 @@
 const buttons = document.querySelectorAll('[data-os]')
 const hint = document.getElementById('os-hint')
 
+const GITHUB_REPO = 'adnanAliSDE/lp-greentime'
+const WINDOWS_ASSET_MATCH = /setup\.exe$/i
+
 const getOS = () => {
   const userAgent = navigator.userAgent.toLowerCase()
   if (userAgent.includes('windows')) return 'windows'
@@ -18,6 +21,42 @@ if (highlight) {
     hint.textContent = `We matched your device: ${highlight.textContent}.`
   }
 }
+
+const updateWindowsDownload = async () => {
+  const windowsButtons = Array.from(buttons).filter((button) => button.dataset.os === 'windows')
+  if (!windowsButtons.length) return
+
+  try {
+    const response = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/releases/latest`, {
+      headers: { Accept: 'application/vnd.github+json' }
+    })
+
+    if (!response.ok) throw new Error('Failed to fetch latest release')
+
+    const release = await response.json()
+    const asset = (release.assets || []).find((item) => WINDOWS_ASSET_MATCH.test(item.name))
+
+    if (asset?.browser_download_url) {
+      windowsButtons.forEach((button) => {
+        button.dataset.url = asset.browser_download_url
+        button.dataset.version = release.tag_name || ''
+
+        const versionBadge = button.querySelector('[data-version]')
+        if (versionBadge && release.tag_name) {
+          versionBadge.textContent = release.tag_name
+          versionBadge.classList.add('is-visible')
+        }
+      })
+      if (hint && os === 'windows' && release.tag_name) {
+        hint.textContent = `Latest Windows build: ${release.tag_name}.`
+      }
+    }
+  } catch (error) {
+    console.warn('Unable to resolve latest Windows download:', error)
+  }
+}
+
+updateWindowsDownload()
 
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
