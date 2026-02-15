@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenTime - Time Tracker | Focus, Flow, Finish</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="GreenTime turns daily work into measurable progress with built-in goals, streaks, and focus tools. Track time with clarity and momentum using our minimal, calm UI designed for deep work." />
+    <meta name="keywords"
+        content="time tracker, productivity app, pomodoro timer, goal tracking, time management, focus app, streak tracker, task manager, analytics, greentime, deep work, productivity tool" />
+    <meta name="author" content="Adnan Ali" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="theme-color" content="#0ea75a" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://greentime.netlify.app/" />
+    <meta property="og:title" content="GreenTime - Time Tracker | Focus, Flow, Finish" />
+    <meta property="og:description"
+        content="Track time with clarity and momentum. GreenTime turns daily work into measurable progress with built-in goals, streaks, and focus tools." />
+    <meta property="og:image" content="https://greentime.netlify.app/assets/GreentimeLogo.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="GreenTime" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://greentime.netlify.app/" />
+    <meta name="twitter:title" content="GreenTime - Time Tracker | Focus, Flow, Finish" />
+    <meta name="twitter:description"
+        content="Track time with clarity and momentum. Built-in goals, streaks, and focus tools for deep work." />
+    <meta name="twitter:image" content="https://greentime.netlify.app/assets/GreentimeLogo.png" />
+    <meta name="twitter:creator" content="@adnanAliSDE" />
+
+    <!-- Additional SEO -->
+    <link rel="canonical" href="https://greentime.netlify.app/" />
+    <link rel="icon" type="image/png" href="assets/GreentimeLogo.png" />
+    <link rel="apple-touch-icon" href="assets/GreentimeLogo.png" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;600&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="ambient"></div>
+    <header class="nav">
+        <div class="brand">
+            <img class="logo" src="assets/GreentimeLogo.png" alt="GreenTime logo" />
+            <div class="brand-text">
+                <span class="name">GreenTime</span>
+                <span class="tag">Time Tracker</span>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#screens">Screens</a>
+            <a href="#download">Download</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="top">
+            <div class="hero-copy">
+                <p class="eyebrow">Focus. Flow. Finish.</p>
+                <h1>Track time with clarity and momentum.</h1>
+                <p class="lead">
+                    GreenTime turns daily work into measurable progress with built-in goals,
+                    streaks, and focus tools.
+                </p>
+                <div class="cta" id="download">
+                    <button class="btn primary" data-os="windows"
+                        data-url="https://github.com/adnanAliSDE/lp-greentime/releases/download/v1.0.1/greentime-1.0.1-setup.exe">Download
+                        for
+                        Windows</button>
+                    <button class="btn" data-os="mac" data-url="tesDownload/mac">Download for macOS</button>
+                    <button class="btn" data-os="linux" data-url="tesDownload/linux">Download for Linux</button>
+                </div>
+                <p class="helper" id="os-hint">We will highlight the best option for your device.</p>
+            </div>
+            <div class="hero-card">
+                <div class="stat">
+                    <span class="stat-number">3x</span>
+                    <span class="stat-label">More consistent streaks</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1 view</span>
+                    <span class="stat-label">All goals and tasks</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">0 noise</span>
+                    <span class="stat-label">Minimal, calm UI</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <h2>Designed for deep work</h2>
+            <div class="feature-grid">
+                <article>
+                    <h3>Intentional scheduling</h3>
+                    <p>Plan sessions, log time, and connect tasks to goals with a clean calendar view.</p>
+                </article>
+                <article>
+                    <h3>Meaningful streaks</h3>
+                    <p>Stay motivated with streak tracking that rewards consistency, not just volume.</p>
+                </article>
+                <article>
+                    <h3>Analytics that matter</h3>
+                    <p>See trends, categories, and daily patterns without a wall of charts.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="screens" id="screens">
+            <div class="screens-head">
+                <h2>See it in action</h2>
+                <p>A quick look at the focus-first interface.</p>
+            </div>
+            <div class="carousel" aria-label="Product screenshots" aria-roledescription="carousel" tabindex="0">
+                <button class="carousel-btn prev" type="button" aria-label="Previous screenshot">Prev</button>
+                <div class="carousel-viewport">
+                    <div class="carousel-track">
+                        <figure class="screen carousel-slide">
+                            <img src="assets/screenshots/dashboard_screen.png" alt="GreenTime dashboard" />
+                            <figcaption>Dashboard overview</figcaption>
+                        </figure>
+                        <figure class="screen carousel-slide">
+                            <img src="assets/screenshots/calendar_screen.png" alt="GreenTime calendar" />
+                            <figcaption>Calendar planning</figcaption>
+                        </figure>
+                        <figure class="screen carousel-slide">
+                            <img src="assets/screenshots/pomodoro_screen.png" alt="GreenTime pomodoro" />
+                            <figcaption>Pomodoro focus mode</figcaption>
+                        </figure>
+                        <figure class="screen carousel-slide">
+                            <img src="assets/screenshots/goals_screen.png" alt="GreenTime goals" />
+                            <figcaption>Goal tracking</figcaption>
+                        </figure>
+                        <figure class="screen carousel-slide">
+                            <img src="assets/screenshots/analytics_screen.png" alt="GreenTime analytics" />
+                            <figcaption>Weekly analytics</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <button class="carousel-btn next" type="button" aria-label="Next screenshot">Next</button>
+                <div class="carousel-dots" role="tablist" aria-label="Screenshot navigation">
+                    <button class="carousel-dot" type="button" data-slide="0" aria-label="Go to slide 1"></button>
+                    <button class="carousel-dot" type="button" data-slide="1" aria-label="Go to slide 2"></button>
+                    <button class="carousel-dot" type="button" data-slide="2" aria-label="Go to slide 3"></button>
+                    <button class="carousel-dot" type="button" data-slide="3" aria-label="Go to slide 4"></button>
+                    <button class="carousel-dot" type="button" data-slide="4" aria-label="Go to slide 5"></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <h2>Build momentum today</h2>
+            <p>Download GreenTime and turn time into progress.</p>
+            <div class="cta">
+                <button class="btn primary" data-os="windows"
+                    data-url="https://github.com/adnanAliSDE/lp-greentime/releases/download/v1.0.1/greentime-1.0.1-setup.exe">Get
+                    GreenTime</button>
+                <a class="text-link" href="#download">Pick another platform</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Made with focus by Adnan Ali.</p>
+        <a href="mailto:adnann3077@gmail.com">Contact me</a>
+    </footer>
+
+    <!-- Coming Soon Modal -->
+    <div class="modal-overlay" id="comingSoonModal" aria-hidden="true">
+        <div class="modal" role="dialog" aria-labelledby="modal-title" aria-describedby="modal-desc">
+            <button class="modal-close" type="button" aria-label="Close modal">&times;</button>
+            <div class="modal-content">
+                <div class="modal-icon">🚀</div>
+                <h3 id="modal-title" class="modal-title">Coming Soon</h3>
+                <p id="modal-desc" class="modal-text">
+                    <span id="modal-platform"></span> version is in the works!
+                    We're working to bring GreenTime to your platform.
+                </p>
+                <p class="modal-hint">Want to be notified when it's ready?</p>
+                <a href="mailto:adnann3077@gmail.com?subject=Notify me about GreenTime" class="modal-btn">Get
+                    Notified</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
